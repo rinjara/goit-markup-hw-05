@@ -5,6 +5,8 @@
   --main-white: #ffffff;
   --dark-bg-color: #2f303a;
   --light-bg-color: #f5f4fa;
+  --transition-duration: 250ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -57,6 +59,10 @@ body {
   text-decoration: none;
   color: inherit;
   font-family: inherit;
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .nav {
   display: flex;
@@ -199,6 +205,7 @@ body {
 
 .modal {
   position: absolute;
+  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -412,6 +419,9 @@ body {
   border-radius: 50%;
 
   fill: #afb1b8;
+
+  transition: fill var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .social-link:hover,
@@ -440,6 +450,9 @@ body {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
+
+  transition: fill var(--transition-duration) var(--transition-timing-function),
+    border var(--transition-duration) var(--transition-timing-function);
 }
 
 .client-company:hover,
@@ -479,6 +492,10 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -509,6 +526,8 @@ body {
 }
 .project {
   display: block;
+
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .project:hover,
 .project:focus {
@@ -615,6 +634,8 @@ body {
 
   fill: var(--main-white);
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
