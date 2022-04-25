@@ -540,6 +540,7 @@ body {
 .overlay {
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 .project-description {
   position: absolute;
@@ -558,7 +559,7 @@ body {
   color: var(--main-white);
   font-size: 18px;
   line-height: 1.5;
-  transform: translateY(120%);
+  transform: translateY(105%);
 
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
